@@ -37,7 +37,7 @@ const ImageAnalysis = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('https://your-app.onrender.com/describe-image', formData, {
+      const response = await axios.post('https://plivo-aemg.onrender.com/describe-image', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -161,3 +161,4 @@ const ImageAnalysis = () => {
 };
 
 export default ImageAnalysis;
+
