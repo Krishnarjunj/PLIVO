@@ -31,7 +31,7 @@ const ConversationAnalysis = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('https://your-app.onrender.com/transcribe', formData, {
+      const response = await axios.post('https://plivo-aemg.onrender.com/transcribe', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -61,7 +61,7 @@ const ConversationAnalysis = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('https://your-app.onrender.com/diarize', formData, {
+      const response = await axios.post('https://plivo-aemg.onrender.com/diarize', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -230,3 +230,4 @@ const ConversationAnalysis = () => {
 };
 
 export default ConversationAnalysis;
+
