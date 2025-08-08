@@ -2,6 +2,7 @@ services:
   - type: web
     name: ai-playground-backend
     env: python
+    pythonVersion: "3.11.7"
     buildCommand: pip install -r server/requirements.txt
     startCommand: cd server && python app.py
     envVars:
