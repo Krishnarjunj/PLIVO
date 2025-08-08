@@ -50,6 +50,10 @@ def check_rate_limit():
         return False
     return True
 
+@app.route('/')
+def index():
+    return jsonify({"status": "backend running"}), 200
+
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({
@@ -550,3 +554,4 @@ def test_gemini():
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+
