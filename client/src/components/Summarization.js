@@ -65,7 +65,7 @@ const Summarization = () => {
           };
           
           try {
-            const response = await axios.post('https://your-app.onrender.com/summarize', payload);
+            const response = await axios.post('https://plivo-aemg.onrender.com/summarize', payload);
             setResults(response.data);
           } catch (err) {
             setError(err.response?.data?.error || 'Summarization failed');
@@ -77,7 +77,7 @@ const Summarization = () => {
         return;
       }
 
-              const response = await axios.post('https://your-app.onrender.com/summarize', payload);
+              const response = await axios.post('https://plivo-aemg.onrender.com/summarize', payload);
       setResults(response.data);
     } catch (err) {
       setError(err.response?.data?.error || 'Summarization failed');
@@ -274,3 +274,4 @@ const Summarization = () => {
 };
 
 export default Summarization;
+
