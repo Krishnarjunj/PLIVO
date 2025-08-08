@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-playground-backend
+    env: python
+    buildCommand: pip install -r server/requirements.txt
+    startCommand: cd server && python app.py
+    envVars:
+      - key: GEMINI_API_KEY
+        value: AIzaSyDwAHnR4kjP2eGTuHdhSBpUHV71zLAtYcI
+      - key: ASSEMBLY_AI_API_KEY
+        sync: false
