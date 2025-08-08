@@ -3,10 +3,12 @@ services:
     name: ai-playground-backend
     env: python
     pythonVersion: "3.11.7"
-    buildCommand: pip install -r server/requirements.txt
+    buildCommand: pip install -r server/requirements-minimal.txt
     startCommand: cd server && python app.py
     envVars:
       - key: GEMINI_API_KEY
         value: AIzaSyDwAHnR4kjP2eGTuHdhSBpUHV71zLAtYcI
       - key: ASSEMBLY_AI_API_KEY
         sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.7"
